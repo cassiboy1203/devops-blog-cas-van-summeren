@@ -25,10 +25,95 @@ Maar waarom zouden ontwikkelaars zich bezighouden met Custom Resources? De relev
 
 ## Definiëren en Gebruiken van Custom Resources
 
+Nu we weten wat Kubernetes Custom Resources zijn, laten we eens kijken hoe je ze kunt definiëren en gebruiken om specifieke applicatievereisten te modelleren. We zullen een praktisch voorbeeld bekijken om deze concepten te verduidelijken.
+Custom Resource Definition (CRD)
+
+Allereerst moet je een Custom Resource Definition (CRD) maken. Dit definieert het nieuwe aangepaste bronobjecttype dat je wilt gebruiken. Hier is een voorbeeld van een CRD-definitie in YAML-formaat:
+
+```yaml
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  name: example.stable.example.com
+spec:
+  group: stable.example.com
+  names:
+    plural: example
+    kind: example
+  versions:
+    - name: v1
+      served: true
+      storage: true
+      schema:
+        openAPIV3Schema:
+          type: object
+          properties:
+            spec:
+              type: object
+              properties:
+                string:
+                  type: string
+                image:
+                  type: string
+                replicas:
+                  type: integer
+  scope: Namespaced
+```
+
+Dit definieert een Custom Resource example onder de api stable.example.com. Het vereist de volgende waardes van implementatie van example om de volgende de properties te hebben: string, image en replicas.
+
+### CRD toepassen
+
+Nadat je de CRD hebt gedefinieerd, moet je deze toepassen op je Kubernetes-cluster met het volgende commando:
+
+```bash
+kubectl apply -f example-crd.yml
+```
+
+Dit zal de definitie van de Custom Resource aan je cluster toevoegen.
+Gebruik van Custom Resources
+
+Nu kun je Custom Resources van het nieuwe type maken en gebruiken. Hier is een voorbeeld van een Custom Resource YAML-definitie:
+
+```yaml
+apiVersion: stable.example.com/v1
+kind: example
+metadata:
+  name: example-instance
+spec:
+  replicas: 1
+  string: "string"
+  image: "ubuntu:latest"
+
+```
+
+Dit voorbeeld maakt een aangepaste bron met de naam "example-instance" met specifieke eigenschappen zoals string, replicas, en image.
+
+### Aangepaste Resource Toepassen
+
+Om deze aangepaste bron toe te passen op je Kubernetes-cluster, gebruik je het volgende commando:
+
+```bash
+kubectl apply -f example.yml
+```
+
+### Aangepaste Resource Controleren
+
+Je kunt de aangepaste bronnen controleren met het volgende commando:
+
+```bash
+kubectl get example
+```
+
+Dit zal alle aangepaste broninstanties weergeven die zijn gemaakt op basis van je definitie.
+
+Dit voorbeeld illustreert hoe je Kubernetes Custom Resources kunt definiëren, toepassen en gebruiken om aangepaste objecttypen te maken en beheren die zijn afgestemd op de behoeften van je applicatie. Custom Resources bieden ontwikkelaars een krachtige tool om Kubernetes aan te passen voor specifieke toepassingen.
+
 ## Optimalisatie van Microservices met Custom Resources
 
 ## Conclusie
 
 ## Bronnen
 
-Custom resources. (2023, August 8). Kubernetes. <https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/>  
+* Custom resources. (2023, August 8). Kubernetes. <https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/>  
+* Extend the Kubernetes API with CustomResourceDefinitions. (2023, September 20). Kubernetes. <https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/>
