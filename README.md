@@ -89,7 +89,7 @@ spec:
 
 Dit voorbeeld maakt een aangepaste bron met de naam "example-instance" met specifieke eigenschappen zoals string, replicas, en image.
 
-### Aangepaste Resource Toepassen
+### Custom Resource Toepassen
 
 Om deze aangepaste bron toe te passen op je Kubernetes-cluster, gebruik je het volgende commando:
 
@@ -97,7 +97,7 @@ Om deze aangepaste bron toe te passen op je Kubernetes-cluster, gebruik je het v
 kubectl apply -f example.yml
 ```
 
-### Aangepaste Resource Controleren
+### Custom Resource Controleren
 
 Je kunt de aangepaste bronnen controleren met het volgende commando:
 
@@ -105,11 +105,25 @@ Je kunt de aangepaste bronnen controleren met het volgende commando:
 kubectl get example
 ```
 
-Dit zal alle aangepaste broninstanties weergeven die zijn gemaakt op basis van je definitie.
+Dit zal alle custom resourceinstanties weergeven die zijn gemaakt op basis van je definitie.
 
 Dit voorbeeld illustreert hoe je Kubernetes Custom Resources kunt definiëren, toepassen en gebruiken om aangepaste objecttypen te maken en beheren die zijn afgestemd op de behoeften van je applicatie. Custom Resources bieden ontwikkelaars een krachtige tool om Kubernetes aan te passen voor specifieke toepassingen.
 
 ## Optimalisatie van Microservices met Custom Resources
+
+Een van de meest opwindende toepassingen van Kubernetes Custom Resources is hun vermogen om de implementatie van microservices-architecturen te vereenvoudigen en optimaliseren. Laten we eens kijken hoe Custom Resources kunnen bijdragen aan een effectievere microservices-implementatie.
+
+### Schaalbare Microservices
+
+Een kernaspect van microservices-architecturen is de mogelijkheid om individuele microservices onafhankelijk te schalen op basis van de actuele belasting en behoeften van de applicatie. Met Kubernetes Custom Resources kunnen ontwikkelaars aangepaste schaalregels definiëren voor specifieke microservices. Dit betekent dat je de schaalbaarheid van elke microservice kunt aanpassen aan de hand van de door jou gedefinieerde criteria.
+
+### Service Mesh Integratie
+
+Service meshes, zoals Istio of Linkerd, worden vaak gebruikt om de communicatie en beveiliging tussen microservices te beheren. Kubernetes Custom Resources kunnen naadloos worden geïntegreerd met service meshes, waardoor ontwikkelaars aangepaste instellingen en configuraties kunnen toepassen op specifieke microservices. Dit vergemakkelijkt de controle over het gedrag en de interactie van microservices binnen de architectuur.
+
+### Applicatiespecifieke Configuraties
+
+Elke microservice kan unieke configuraties en vereisten hebben. Met Custom Resources kunnen ontwikkelaars applicatiespecifieke configuratieparameters definiëren en beheren voor elke microservice. Dit maakt het mogelijk om flexibel in te spelen op de behoeften van elke microservice zonder de complexiteit van globale configuratiebestanden.
 
 ## Conclusie
 
@@ -117,3 +131,5 @@ Dit voorbeeld illustreert hoe je Kubernetes Custom Resources kunt definiëren, t
 
 * Custom resources. (2023, August 8). Kubernetes. <https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/>  
 * Extend the Kubernetes API with CustomResourceDefinitions. (2023, September 20). Kubernetes. <https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/>
+* The Distributed System ToolKit: Patterns for composite containers. (2020, July 24). Kubernetes. <https://kubernetes.io/blog/2015/06/the-distributed-system-toolkit-patterns/>
+* What’s a service mesh? (n.d.). <https://www.redhat.com/en/topics/microservices/what-is-a-service-mesh>
