@@ -5,6 +5,13 @@
 
 ## Inhoudsopgave
 
+* [Inleiding](#inleiding)
+* [Wat zijn Kubernetes Custom Resources?](#wat-zijn-kubernetes-custom-resources)
+* [Definiëren en Gebruiken van Custom Resources](#definitie-van-kubernetes-custom-resources)
+* [Optimalisatie van Microservices met Custom Resources](#optimalisatie-van-microservices-met-custom-resources)
+* [Conclusie](#conclusie)
+* [Bronnen](#bronnen)
+
 ## Inleiding
 
 In de wereld van softwareontwikkeling draait alles om snelheid, schaalbaarheid en efficiëntie. Als softwareontwikkelaar ben je altijd op zoek naar krachtige tools om complexe applicaties moeiteloos te beheren en uit te breiden. Kubernetes heeft al veel veranderd in container- en microservices-beheer, maar er is nog een krachtige troef: Kubernetes Custom Resources.
