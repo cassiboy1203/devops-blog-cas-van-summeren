@@ -1,0 +1,11 @@
+apiVersion: stable.example.com/v1
+kind: device
+metadata:
+  name: device1-instance
+spec:
+  replicas: 1
+  image: "ubuntu:latest"
+  deviceId: "1"
+  type: "sensor"
+  location: "nijmegen"
+  status: 0

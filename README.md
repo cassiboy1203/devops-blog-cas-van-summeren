@@ -7,8 +7,9 @@
 
 * [Inleiding](#inleiding)
 * [Wat zijn Kubernetes Custom Resources?](#wat-zijn-kubernetes-custom-resources)
-* [Definiëren en Gebruiken van Custom Resources](#definitie-van-kubernetes-custom-resources)
-* [Optimalisatie van Microservices met Custom Resources](#optimalisatie-van-microservices-met-custom-resources)
+* [Hoe worden custom resources gebruikt?](#definitie-van-kubernetes-custom-resources)
+* [Hoe maak je een custom resource?](#optimalisatie-van-microservices-met-custom-resources)
+* [Waarom zou je custom resources willen gebruiken?]()
 * [Conclusie](#conclusie)
 * [Bronnen](#bronnen)
 

@@ -1,8 +1,0 @@
-apiVersion: stable.example.com/v1
-kind: example
-metadata:
-  name: example-instance
-spec:
-  replicas: 1
-  string: "string"
-  image: "ubuntu:latest"

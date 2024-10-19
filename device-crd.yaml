@@ -1,12 +1,13 @@
 apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
-  name: example.stable.example.com
+  name: device.stable.example.com
 spec:
   group: stable.example.com
   names:
-    plural: example
-    kind: example
+    singular: device
+    plural: devices
+    kind: device
   versions:
     - name: v1
       served: true
@@ -18,8 +19,18 @@ spec:
             spec:
               type: object
               properties:
-                string:
+                deviceId:
                   type: string
+                type:
+                  type: string
+                location:
+                  type: string
+                status:
+                  type: integer
+                  default: 0
+                lastCheckIn:
+                  type: integer
+                  default: 0
                 image:
                   type: string
                 replicas:
