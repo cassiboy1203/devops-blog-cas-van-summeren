@@ -3,6 +3,8 @@
 *Cas van Summeren*, Februari 2025
 <hr>
 
+<img src="Kubernetes.png" width=500>
+
 ## Inhoudsopgave <!-- omit from toc -->
 
 - [Inleiding](#inleiding)
@@ -27,17 +29,25 @@
 
 ## Inleiding
 
-Kubernetes biedt krachtige ingebouwde resources, zoals Pods, Deployments en Services, deze zijn niet altijd voldoende om specifieke behoeften van applicaties en infrastructuren te ondersteunen. Gelukkig biedt Kubernetes een oplossing: Custom Resources. (Muppeda, 2024)
+Kubernetes biedt krachtige ingebouwde resources, zoals Pods, Deployments en Services, deze zijn niet altijd voldoende om specifieke behoeften van applicaties en infrastructuren te ondersteunen. Gelukkig biedt Kubernetes een oplossing: Custom Resources (Muppeda, 2024).
 
-Met Kubernetes Custom Resources kun je de functionaliteit van Kubernetes uitbreiden door eigen resource-typen te definiëren en te beheren. Dit opent de deur naar meer flexibiliteit, betere automatisering en diepere integraties met externe systemen. (Muppeda, 2024)
+Met Kubernetes Custom Resources kun je de functionaliteit van Kubernetes uitbreiden door eigen resource-typen te definiëren en te beheren. Dit opent de deur naar meer flexibiliteit, betere automatisering en diepere integraties met externe systemen (Muppeda, 2024).
+
+Voor mijn onderzoek naar Kubernetes Custom Resources heb ik de volgende artikelen doorgenomen (Muppeda, 2024), (Kathayat, 2024) en de documentatie van Kubernetes (2024a). Deze artikelen en de documentatie zijn gebruikt om zelf een implementatie van Kubernetes Custom Resources te maken. De opgedane ervaring beschrijf ik in onderstaande blog.
 
 In deze blog duiken we diep in Kubernetes Custom Resources: we leggen uit wat ze zijn, waarom je ze zou gebruiken en hoe je ze implementeert met Custom Resource Definitions (CRD’s) en controllers. Of je nu een ontwikkelaar bent die Kubernetes wil aanpassen aan specifieke use cases of een DevOps-engineer die op zoek is naar efficiëntere workflows, deze blog biedt de kennis die je nodig hebt om aan de slag te gaan met Kubernetes Custom Resources.
 
 ## Wat zijn Kubernetes Custom Resources?
 
-Kubernetes bevat een aantal ingebouwde resources, zoals Pods, Deployments en Services, waarmee gebruikers hun applicaties kunnen beheren. Soms zijn deze standaardresources echter niet voldoende. In zulke gevallen bieden Kubernetes Custom Resources een oplossing. (Muppeda, 2024)
+<span>
+  <img src="kubernetes_custom_resources.png" width=750>
 
-Kubernetes Custom Resources breiden de standaard Kubernetes API uit, waardoor gebruikers hun eigen resource-typen kunnen definiëren en beheren. Dit maakt het mogelijk om de functionaliteit van Kubernetes uit te breiden zonder wijzigingen aan de Kubernetes-broncode. (Custom Resources, 2024)
+  (Muppeda, 2024)
+</span>
+
+Kubernetes bevat een aantal ingebouwde resources, zoals Pods, Deployments en Services, waarmee gebruikers hun applicaties kunnen beheren. Soms zijn deze standaardresources echter niet voldoende. In zulke gevallen bieden Kubernetes Custom Resources een oplossing (Muppeda, 2024).
+
+Kubernetes Custom Resources breiden de standaard Kubernetes API uit, waardoor gebruikers hun eigen resource-typen kunnen definiëren en beheren. Dit maakt het mogelijk om de functionaliteit van Kubernetes uit te breiden zonder wijzigingen aan de Kubernetes-broncode (Kubernetes, 2024a).
 
 Een kubernetes custom resource bestaat uit:
 
@@ -47,7 +57,7 @@ Een kubernetes custom resource bestaat uit:
 
 ## Waarom zou je Kubernetes Custom Resources willen gebruiken?
 
-Standaard Kubernetes-resources zijn krachtig, maar niet altijd voldoende voor specifieke use cases. Custom Resources bieden extra flexibiliteit door Kubernetes uit te breiden zonder de broncode aan te passen. Dit maakt het mogelijk om Kubernetes beter af te stemmen op de behoeften van jouw applicatie en infrastructuur. (Custom Resources, 2024)
+Standaard Kubernetes-resources zijn krachtig, maar niet altijd voldoende voor specifieke use cases. Custom Resources bieden extra flexibiliteit door Kubernetes uit te breiden zonder de broncode aan te passen. Dit maakt het mogelijk om Kubernetes beter af te stemmen op de behoeften van jouw applicatie en infrastructuur (Kubernetes, 2024a).
 
 Enkele redenen om Custom Resources te gebruiken:
 
@@ -379,8 +389,8 @@ Of je nu een ontwikkelaar bent die specifieke applicatiebehoeften wil ondersteun
 
 ## Bronnen
 
-- Custom resources. (2024, October 31). Kubernetes. <https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/>
+- Kubernetes. (2024a, 31 oktober). Custom resources. <https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/>
 - Muppeda, A. (2024, April 23).  A Hands-On Guide to Kubernetes Custom Resource Definitions (CRDs) with a practical example. Medium. <https://medium.com/@muppedaanvesh/a-hand-on-guide-to-kubernetes-custom-resource-definitions-crds-with-a-practical-example-%EF%B8%8F-84094861e90b>
 - Kathayat, A. S. (2024, December 24). Custom Resource Definitions (CRDs) in Kubernetes: Extending the API for custom resources. DEV Community. <https://dev.to/abhay_yt_52a8e72b213be229/custom-resource-definitions-crds-in-kubernetes-extending-the-api-for-custom-resources-e94>
-- Controllers. (2024, August 31). Kubernetes. <https://kubernetes.io/docs/concepts/architecture/controller/>
+- Kubernetes. (2024b, augustus 31). Controllers. <https://kubernetes.io/docs/concepts/architecture/controller/>
 - Kopf: Kubernetes Operators Framework — Kopf documentation. (n.d.). <https://kopf.readthedocs.io/en/stable/>
