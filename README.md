@@ -389,8 +389,8 @@ Of je nu een ontwikkelaar bent die specifieke applicatiebehoeften wil ondersteun
 
 ## Bronnen
 
-- Kubernetes. (2024a, 31 oktober). Custom resources. <https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/>
-- Muppeda, A. (2024, April 23).  A Hands-On Guide to Kubernetes Custom Resource Definitions (CRDs) with a practical example. Medium. <https://medium.com/@muppedaanvesh/a-hand-on-guide-to-kubernetes-custom-resource-definitions-crds-with-a-practical-example-%EF%B8%8F-84094861e90b>
-- Kathayat, A. S. (2024, December 24). Custom Resource Definitions (CRDs) in Kubernetes: Extending the API for custom resources. DEV Community. <https://dev.to/abhay_yt_52a8e72b213be229/custom-resource-definitions-crds-in-kubernetes-extending-the-api-for-custom-resources-e94>
-- Kubernetes. (2024b, augustus 31). Controllers. <https://kubernetes.io/docs/concepts/architecture/controller/>
-- Kopf: Kubernetes Operators Framework — Kopf documentation. (n.d.). <https://kopf.readthedocs.io/en/stable/>
+- Kubernetes. (2024a, 31 oktober). *Custom resources.* <https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/>
+- Muppeda, A. (2024, April 23).  *A Hands-On Guide to Kubernetes Custom Resource Definitions (CRDs) with a practical example.* Medium. <https://medium.com/@muppedaanvesh/a-hand-on-guide-to-kubernetes-custom-resource-definitions-crds-with-a-practical-example-%EF%B8%8F-84094861e90b>
+- Kathayat, A. S. (2024, December 24). *Custom Resource Definitions (CRDs) in Kubernetes: Extending the API for custom resources.* DEV Community. <https://dev.to/abhay_yt_52a8e72b213be229/custom-resource-definitions-crds-in-kubernetes-extending-the-api-for-custom-resources-e94>
+- Kubernetes. (2024b, augustus 31). *Controllers.* <https://kubernetes.io/docs/concepts/architecture/controller/>
+- Kopf. (z.d.). *Kopf: Kubernetes Operators Framework.* <https://kopf.readthedocs.io/en/stable/>
